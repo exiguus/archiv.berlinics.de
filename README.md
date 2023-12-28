@@ -22,18 +22,11 @@ make run
 
 ## Github Pages
 
+Deploy github pages with lfs support need a [github action workflow](.github/workflows/gh-pages.yml).
+
 Manual deploy to github pages:
 
-```bash
-git checkout gh-pages
-make all
-# test static site
-make test
-rm -rf ./docs/** && cp -r ./build/berlinics.de/** docs/
-git add docs/
-git commit -m "feat(docs): update docs"
-git push origin gh-pages
-```
+<https://github.com/exiguus/archiv.berlinics.de/actions/workflows/gh-pages.yml>
 
 ## test
 
