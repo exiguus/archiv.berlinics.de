@@ -3,7 +3,7 @@
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  create		to create output"
-	@echo "  fetch		to fetch input (only run once to fetch input from gedit.net)"
+	@echo "  fetch		to fetch input (only run once to fetch input from berlinics.de)"
 	@echo "  build		to build docker image (run with -B to force rebuild)"
 	@echo "  format		to format code"
 	@echo "  test		to test docker image"
@@ -101,7 +101,7 @@ create:
 	find ./output/berlinics.de -type f -name 'style.css' -exec sed -i -E 's/Georgia/"PT Serif"/g' {} \;
 
 # Path: Makefile
-# build docker 
+# build docker
 build:
 	rm -rf ./build/*
 	cp -R ./output/* ./build
